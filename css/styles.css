@@ -18,6 +18,7 @@
     --font-body: 'Inter', sans-serif;
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -25,6 +26,7 @@
     scroll-behavior: smooth;
     -webkit-tap-highlight-color: transparent !important;
 }
+
 /* Remove all visual feedback for clicking/tapping */
 *:focus,
 *:active {
@@ -34,6 +36,7 @@
     transform: none !important;
     transition: none !important;
 }
+
 body {
     font-family: var(--font-body);
     background: radial-gradient(circle at top right, rgba(212, 175, 55, 0.15) 0%, transparent 50%),
@@ -45,6 +48,7 @@ body {
     color: var(--text-color);
     line-height: 1.6;
 }
+
 /* Animation Base Classes */
 section,
 .service-card,
@@ -54,10 +58,12 @@ section,
     transform: translateY(30px);
     transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .animate-in {
     opacity: 1 !important;
     transform: translateY(0) !important;
 }
+
 /* Header */
 header {
     background-color: rgba(0, 0, 0, 0.75);
@@ -74,36 +80,43 @@ header {
     z-index: 1000;
     transition: all 0.3s ease;
 }
+
 header.scrolled {
     padding: 0.25rem 5%;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
 }
+
 .logo-container {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
+
 .logo {
     max-width: 650px;
     height: 90px;
     object-fit: contain;
     transition: all 0.3s ease;
 }
+
 header.scrolled .logo {
     height: 60px;
 }
+
 .brand-name {
     font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: 1px;
     color: #ffffff;
 }
+
 nav ul {
     display: flex;
     list-style: none;
     gap: 2rem;
     align-items: center;
 }
+
 nav a {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.8);
@@ -113,9 +126,11 @@ nav a {
     font-size: 0.9rem;
     letter-spacing: 1px;
 }
+
 nav a:hover {
     color: var(--secondary-color);
 }
+
 .cta-button-small {
     background-color: #ffffff;
     color: #000000 !important;
@@ -124,9 +139,11 @@ nav a:hover {
     transition: all 0.3s ease;
     font-weight: 700;
 }
+
 .cta-button-small:hover {
     background-color: white;
 }
+
 /* Mobile Menu Toggle Button */
 .mobile-menu-toggle {
     display: none;
@@ -143,6 +160,7 @@ nav a:hover {
     z-index: 1001;
     transition: all 0.3s ease;
 }
+
 .mobile-menu-toggle span {
     width: 100%;
     height: 2px;
@@ -152,20 +170,25 @@ nav a:hover {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     transform-origin: center;
 }
+
 .mobile-menu-toggle:hover span {
     background-color: var(--secondary-color);
 }
+
 /* Hamburger Animation when active */
 .mobile-menu-toggle.active span:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
 }
+
 .mobile-menu-toggle.active span:nth-child(2) {
     opacity: 0;
     transform: translateX(-20px);
 }
+
 .mobile-menu-toggle.active span:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
 }
+
 /* Hero Section */
 .hero {
     min-height: 100vh;
@@ -179,6 +202,7 @@ nav a:hover {
     justify-content: flex-start;
     border-bottom: 1px solid #222;
 }
+
 .hero-video {
     position: absolute;
     top: 0;
@@ -189,6 +213,7 @@ nav a:hover {
     z-index: 1;
     filter: brightness(0.5);
 }
+
 /* Korea */
 /* Korea */
 .hero-content {
@@ -198,14 +223,17 @@ nav a:hover {
     margin-top: 2rem;
     animation: fadeInUp 1s ease-out forwards;
 }
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
 }
+
 .motto {
     color: var(--accent-color);
     font-size: 1rem;
@@ -216,6 +244,7 @@ nav a:hover {
     display: inline-block;
     opacity: 0.9;
 }
+
 .hero h1 {
     font-size: 4rem;
     line-height: 1.1;
@@ -223,17 +252,20 @@ nav a:hover {
     font-weight: 700;
     max-width: 800px;
 }
+
 .hero p {
     font-size: 1.25rem;
     color: rgba(255, 255, 255, 0.8);
     max-width: 600px;
     margin-bottom: 2.5rem;
 }
+
 .hero-buttons {
     display: flex;
     gap: 1.5rem;
     margin-top: 1rem;
 }
+
 .cta-button-primary,
 .cta-button-secondary {
     padding: 1rem 2.5rem;
@@ -246,6 +278,7 @@ nav a:hover {
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     display: inline-block;
 }
+
 .cta-button-primary {
     background: rgba(96, 165, 250, 0.2);
     color: white !important;
@@ -255,58 +288,69 @@ nav a:hover {
     box-shadow: 0 4px 20px rgba(96, 165, 250, 0.3),
         inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
+
 .cta-button-primary:hover {
     background: rgba(96, 165, 250, 0.3);
     border-color: rgba(96, 165, 250, 0.6);
     box-shadow: 0 8px 30px rgba(96, 165, 250, 0.5),
         inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
+
 .cta-button-secondary {
     background-color: rgba(255, 255, 255, 0.05);
     color: white !important;
     backdrop-filter: blur(5px);
     border: 1px solid var(--glass-border);
 }
+
 .cta-button-secondary:hover {
     background-color: rgba(255, 255, 255, 0.1);
     border-color: var(--accent-color);
 }
+
 /* ... existing heading styles ... */
 .hero-visual {
     /* Visual container simplified or removed if empty */
     display: none;
     /* Hide since globe is gone */
 }
+
 /* Globe styles removed */
 /* Common Section */
 section {
     padding: 5rem 5%;
 }
+
 .section-header {
     text-align: center;
     margin-bottom: 4rem;
 }
+
 .section-header h2 {
     font-size: 2.8rem;
     color: var(--text-color);
     margin-bottom: 1rem;
     font-weight: 700;
 }
+
 .section-header p {
     color: var(--text-muted);
     max-width: 600px;
     margin: 0 auto;
     font-size: 1.1rem;
 }
+
 /* Services */
 .services {
     background: transparent;
 }
+
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
+
 .service-card {
     background: var(--card-bg);
     padding: 2.5rem;
@@ -315,10 +359,12 @@ section {
     transition: all 0.3s ease;
     text-align: center;
 }
+
 .service-card:hover {
     border-color: var(--accent-color);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
+
 .icon-wrapper {
     width: 70px;
     height: 70px;
@@ -330,27 +376,33 @@ section {
     align-items: center;
     margin: 0 auto 1.5rem;
 }
+
 .service-card h3 {
     margin-bottom: 1rem;
     color: var(--text-color);
     font-size: 1.4rem;
 }
+
 .service-card p {
     color: var(--text-muted);
 }
+
 /* About Us */
 .about {
     background: transparent;
 }
+
 .about-container {
     max-width: 1200px;
     margin: 0 auto;
 }
+
 .about-content {
     display: flex;
     flex-direction: column;
     gap: 4rem;
 }
+
 .about-story {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(15px) saturate(180%);
@@ -361,31 +413,37 @@ section {
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     transition: var(--transition-smooth);
 }
+
 .about-story:hover {
     border-color: rgba(255, 255, 255, 0.2);
     box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5);
 }
+
 .about-story h3 {
     font-size: 2rem;
     color: var(--text-color);
     margin-bottom: 1.5rem;
     font-weight: 700;
 }
+
 .about-story p {
     color: var(--text-muted);
     font-size: 1.1rem;
     line-height: 1.8;
     margin-bottom: 1rem;
 }
+
 .about-story p:last-child {
     margin-bottom: 0;
 }
+
 /* Stats Cards */
 .about-stats {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
 }
+
 .stat-card {
     background: rgba(96, 165, 250, 0.1);
     backdrop-filter: blur(15px) saturate(180%);
@@ -397,11 +455,13 @@ section {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
+
 .stat-card:hover {
     border-color: rgba(96, 165, 250, 0.4);
     box-shadow: 0 15px 40px rgba(96, 165, 250, 0.3);
     background: rgba(96, 165, 250, 0.15);
 }
+
 .stat-number {
     font-size: 3rem;
     font-weight: 800;
@@ -413,6 +473,7 @@ section {
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
+
 .stat-label {
     font-size: 1rem;
     color: var(--text-muted);
@@ -420,6 +481,7 @@ section {
     letter-spacing: 1px;
     font-weight: 600;
 }
+
 /* Values Section */
 .about-values {
     background: rgba(255, 255, 255, 0.05);
@@ -430,6 +492,7 @@ section {
     padding: 3rem;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
+
 .about-values h3 {
     font-size: 2rem;
     color: var(--text-color);
@@ -437,24 +500,37 @@ section {
     font-weight: 700;
     text-align: center;
 }
+
 .values-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    gap: 1.5rem;
+    align-items: stretch;
+    /* Ensure cards in same row have same height */
 }
+
 .value-item {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 12px;
-    padding: 2rem;
+    padding: 2rem 1.5rem;
     text-align: center;
+    display: flex;
+    /* Added for symmetry */
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 100%;
+    /* Fill grid cell */
 }
+
 .value-item:hover {
     border-color: rgba(96, 165, 250, 0.3);
     background: rgba(96, 165, 250, 0.08);
     box-shadow: 0 10px 30px rgba(96, 165, 250, 0.2);
 }
+
 .value-item i {
     font-size: 2.5rem;
     color: var(--accent-color);
@@ -462,29 +538,35 @@ section {
     display: block;
     transition: all 0.3s ease;
 }
+
 .value-item:hover i {
     color: #60a5fa;
 }
+
 .value-item h4 {
     font-size: 1.3rem;
     color: var(--text-color);
     margin-bottom: 0.8rem;
     font-weight: 700;
 }
+
 .value-item p {
     color: var(--text-muted);
     font-size: 0.95rem;
     line-height: 1.6;
 }
+
 /* Countries */
 .countries {
     background: transparent;
 }
+
 .countries-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
 }
+
 .country-card {
     position: relative;
     background: rgba(255, 255, 255, 0.08);
@@ -499,10 +581,12 @@ section {
     display: flex;
     flex-direction: column;
 }
+
 .country-card:hover {
     border-color: rgba(255, 255, 255, 0.3);
     box-shadow: 0 25px 60px 0 rgba(0, 0, 0, 0.6);
 }
+
 .country-image {
     height: 200px;
     width: 100%;
@@ -514,9 +598,11 @@ section {
     border-radius: 20px 20px 0 0;
     overflow: hidden;
 }
+
 .country-card:hover .country-image {
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
 }
+
 /* Card content styles */
 .country-card-content {
     transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
@@ -526,7 +612,9 @@ section {
     display: flex;
     flex-direction: column;
 }
+
 .country-card:hover .country-card-content {}
+
 .country-card h3 {
     margin: 1.5rem;
     color: var(--text-color);
@@ -535,9 +623,11 @@ section {
     margin-bottom: 0.5rem;
     transition: all 0.3s ease;
 }
+
 .country-card:hover h3 {
     color: var(--accent-color);
 }
+
 .ad-text {
     font-size: 1rem;
     color: var(--text-muted);
@@ -545,6 +635,7 @@ section {
     line-height: 1.6;
     flex-grow: 1;
 }
+
 /* Social Media Links */
 .social-links {
     margin-top: 2rem;
@@ -552,23 +643,28 @@ section {
     justify-content: center;
     gap: 2rem;
 }
+
 .social-icon {
     color: white;
     font-size: 1.8rem;
     transition: transform 0.3s ease, color 0.3s ease;
 }
+
 .social-icon:hover {
     color: #cccccc;
     /* Light grey on hover */
 }
+
 /* FAQ */
 .faq {
     background: transparent;
 }
+
 .faq-accordion {
     max-width: 800px;
     margin: 0 auto;
 }
+
 .faq-item {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 12px;
@@ -577,11 +673,13 @@ section {
     overflow: hidden;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .faq-item.active {
     background: rgba(255, 255, 255, 0.08);
     border-color: rgba(255, 255, 255, 0.2);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
+
 .faq-question {
     padding: 1.2rem 2rem;
     cursor: pointer;
@@ -592,17 +690,21 @@ section {
     transition: all 0.3s ease;
     position: relative;
 }
+
 .faq-question i {
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     font-size: 0.9rem;
 }
+
 .faq-question:hover {
     background: rgba(255, 255, 255, 0.05);
     color: var(--accent-color);
 }
+
 .faq-item.active .faq-question {
     color: var(--accent-color);
 }
+
 .faq-answer {
     max-height: 0;
     overflow: hidden;
@@ -613,15 +715,18 @@ section {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     opacity: 0;
 }
+
 .faq-item.active .faq-answer {
     max-height: 500px;
     padding: 0 2rem 1.5rem;
     opacity: 1;
 }
+
 .faq-item.active .faq-question i {
     transform: rotate(180deg);
     color: var(--accent-color);
 }
+
 /* Contact */
 .contact {
     background: transparent;
@@ -629,11 +734,13 @@ section {
     text-align: center;
     padding: 8rem 5%;
 }
+
 .contact-container h2 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
     color: white;
 }
+
 .contact-details {
     display: flex;
     justify-content: center;
@@ -642,18 +749,22 @@ section {
     font-size: 1.1rem;
     color: rgba(255, 255, 255, 0.9);
 }
+
 .contact-item span {
     font-weight: 600;
     color: var(--accent-color);
 }
+
 .contact-item a {
     color: var(--accent-color);
     text-decoration: none;
     transition: var(--transition-smooth);
 }
+
 .contact-item a:hover {
     color: white;
 }
+
 /* Footer */
 footer {
     background-color: var(--primary-color);
@@ -663,6 +774,7 @@ footer {
     font-size: 0.9rem;
     border-top: 1px solid var(--glass-border);
 }
+
 /* Floating WhatsApp Button */
 .whatsapp-float {
     position: fixed;
@@ -686,74 +798,92 @@ footer {
     text-decoration: none;
     animation: pulse 2s infinite;
 }
+
 .whatsapp-float i {
     font-size: 24px;
     color: #25D366;
 }
+
 .whatsapp-float span {
     white-space: nowrap;
     color: var(--text-color);
 }
+
 .whatsapp-float:hover {
     background: rgba(37, 211, 102, 0.25);
     border-color: rgba(37, 211, 102, 0.5);
     box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5);
 }
+
 @keyframes pulse {
+
     0%,
     100% {
         box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
     }
+
     50% {
         box-shadow: 0 4px 30px rgba(37, 211, 102, 0.6);
     }
 }
+
 /* Visibility Utilities */
 .mobile-only {
     display: none;
 }
+
 .desktop-only {
     display: block;
 }
+
 .swipe-indicator {
     display: none;
 }
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
     .mobile-only {
         display: block;
     }
+
     .desktop-only {
         display: none;
     }
+
     .whatsapp-float {
         bottom: 20px;
         right: 20px;
         padding: 10px 16px;
         font-size: 14px;
     }
+
     .whatsapp-float i {
         font-size: 20px;
     }
+
     /* Mobile Header */
     header {
         padding: 0.7rem 6%;
         /* Slightly more horizontal breathing room */
         background-color: rgba(0, 0, 0, 0.9);
     }
+
     .logo {
         max-width: 240px;
         /* Much more refined on mobile */
         height: 55px;
         /* Sleeker logo height */
     }
+
     header.scrolled .logo {
         height: 45px;
     }
+
     /* Show hamburger menu on mobile */
     .mobile-menu-toggle {
         display: flex;
     }
+
     /* Mobile Navigation */
     nav {
         position: fixed;
@@ -770,36 +900,46 @@ footer {
         transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         z-index: 999;
     }
+
     nav.active {
         right: 0;
     }
+
     /* Staggered Entrance for Navigation Items */
     nav ul li {
         opacity: 0;
         transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     }
+
     nav.active ul li {
         opacity: 1;
     }
+
     /* Delay each item for the staggered effect */
     nav.active ul li:nth-child(1) {
         transition-delay: 0.1s;
     }
+
     nav.active ul li:nth-child(2) {
         transition-delay: 0.2s;
     }
+
     nav.active ul li:nth-child(3) {
         transition-delay: 0.3s;
     }
+
     nav.active ul li:nth-child(4) {
         transition-delay: 0.4s;
     }
+
     nav.active ul li:nth-child(5) {
         transition-delay: 0.5s;
     }
+
     nav.active ul li:nth-child(6) {
         transition-delay: 0.6s;
     }
+
     nav ul {
         flex-direction: column;
         gap: 1.8rem;
@@ -808,6 +948,7 @@ footer {
         width: 100%;
         padding: 0 10%;
     }
+
     nav a {
         font-size: 1.1rem;
         /* More refined size */
@@ -817,11 +958,13 @@ footer {
         opacity: 0.9;
         transition: all 0.3s ease;
     }
+
     nav a:hover {
         opacity: 1;
         letter-spacing: 4px;
         color: var(--secondary-color);
     }
+
     .cta-button-small {
         padding: 0.8rem 2.2rem;
         font-size: 0.95rem;
@@ -831,29 +974,36 @@ footer {
         display: inline-block;
         box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
     }
+
     /* Hero Section Mobile */
     .hero {
         padding: 100px 5% 3rem;
         text-align: left;
     }
+
     .hero h1 {
         font-size: 2.5rem;
     }
+
     .hero p {
         font-size: 1rem;
     }
+
     .motto {
         font-size: 0.85rem;
         letter-spacing: 2px;
     }
+
     .hero-content {
         max-width: 100%;
         margin-top: 2rem;
     }
+
     .hero-buttons {
         flex-direction: column;
         gap: 1rem;
     }
+
     .cta-button-primary,
     .cta-button-secondary {
         width: 100%;
@@ -861,25 +1011,31 @@ footer {
         padding: 0.9rem 2rem;
         font-size: 0.9rem;
     }
+
     /* Sections */
     section {
         padding: 3rem 5%;
     }
+
     .section-header h2 {
         font-size: 2rem;
     }
+
     .section-header p {
         font-size: 1rem;
     }
+
     /* Services Grid */
     .services-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
+
     /* Countries Sliding Slider Mobile */
     .countries {
         position: relative;
     }
+
     .countries-grid {
         display: flex;
         overflow-x: auto;
@@ -892,14 +1048,17 @@ footer {
         -webkit-overflow-scrolling: touch;
         scroll-padding: 0 10%;
     }
+
     .countries-grid::after {
         content: '';
         flex: 0 0 5%;
         /* Ghost element for end spacing */
     }
+
     .countries-grid::-webkit-scrollbar {
         display: none;
     }
+
     .country-card {
         flex: 0 0 82%;
         height: 420px;
@@ -907,6 +1066,7 @@ footer {
         margin-bottom: 1rem;
         transition: transform 0.3s ease;
     }
+
     .swipe-indicator {
         display: block;
         text-align: center;
@@ -920,145 +1080,198 @@ footer {
         text-transform: uppercase;
         animation: swipeHint 2.5s infinite ease-in-out;
     }
+
     @keyframes swipeHint {
+
         0%,
         100% {
             transform: translateX(0);
             opacity: 0.5;
         }
+
         50% {
             transform: translateX(15px);
             opacity: 1;
         }
     }
+
     /* Contact */
     .contact {
         padding: 4rem 5%;
     }
+
     .contact-container h2 {
         font-size: 2rem;
     }
+
     .contact-details {
         flex-direction: column;
         gap: 1.5rem;
         align-items: center;
     }
+
     .contact-item {
         text-align: center;
     }
+
     /* About Section */
     .about-story,
     .about-values {
         padding: 2rem;
     }
+
     .about-stats {
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
     }
+
     .stat-card {
         padding: 1.5rem 1rem;
     }
+
     .stat-number {
         font-size: 2rem;
     }
+
     .values-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
+        gap: 0.6rem;
+        /* Tight gap for more item space */
+        width: 100%;
     }
+
     .value-item {
-        padding: 1.5rem 1rem;
+        padding: 1rem 0.6rem;
+        min-height: 190px;
+        /* Force symmetry across rows */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* Center content vertically for symmetry */
     }
+
     .value-item i {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
+        margin-bottom: 0.6rem;
     }
+
     .value-item h4 {
-        font-size: 1.1rem;
+        font-size: 0.9rem;
+        margin-bottom: 0.4rem;
+        line-height: 1.2;
     }
+
     .value-item p {
-        font-size: 0.85rem;
+        font-size: 0.72rem;
+        line-height: 1.4;
+        margin: 0;
     }
+
     .about-story h3,
     .about-values h3 {
         font-size: 1.5rem;
+        margin-bottom: 1.5rem;
     }
+
     /* FAQ */
     .faq-question {
         padding: 1rem 1.5rem;
         font-size: 0.95rem;
     }
+
     .faq-answer {
         padding: 0 1.5rem;
         font-size: 0.9rem;
     }
+
     .faq-item.active .faq-answer {
         padding: 0 1.5rem 1.2rem;
     }
 }
+
 /* Tablet Responsive */
 @media (max-width: 1024px) and (min-width: 769px) {
     .logo {
         max-width: 450px;
         height: 80px;
     }
+
     header.scrolled .logo {
         height: 55px;
     }
+
     nav ul {
         gap: 1.5rem;
     }
+
     nav a {
         font-size: 0.85rem;
     }
+
     .hero h1 {
         font-size: 3.5rem;
     }
+
     .section-header h2 {
         font-size: 2.5rem;
     }
+
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .countries-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .about-stats {
         grid-template-columns: repeat(3, 1fr);
     }
+
     .values-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
     }
 }
+
 /* Small Mobile Devices */
 @media (max-width: 480px) {
     .logo {
         max-width: 300px;
         height: 60px;
     }
+
     header.scrolled .logo {
         height: 45px;
     }
+
     .hero h1 {
         font-size: 2rem;
     }
+
     .section-header h2 {
         font-size: 1.75rem;
     }
+
     .about-stats {
         grid-template-columns: 1fr;
     }
+
     .stat-card {
         padding: 1.2rem 1rem;
     }
+
     .whatsapp-float {
         bottom: 15px;
         right: 15px;
         padding: 8px 12px;
         font-size: 12px;
     }
+
     .whatsapp-float span {
         display: none;
     }
+
     .whatsapp-float i {
         font-size: 24px;
     }
