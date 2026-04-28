@@ -388,19 +388,37 @@
                         overflow: hidden;
                     }
 
-                    .phone-prefix {
+                    .phone-prefix-select {
                         background: #f9fafb;
-                        padding: 0.85rem 0.75rem;
+                        padding: 0.85rem 0.5rem;
+                        border: none;
                         border-right: 1px solid #e5e7eb;
                         color: #6b7280;
                         font-size: 0.95rem;
-                        display: flex;
-                        align-items: center;
+                        cursor: pointer;
+                        outline: none;
+                        width: 140px;
+                        flex-shrink: 0;
+                    }
+
+                    .inline-error {
+                        font-size: 0.75rem;
+                        color: #d0021b;
+                        margin-top: 4px;
+                        display: none;
+                    }
+
+                    .phone-input-container select {
+                        width: 140px;      /* Override global .lead-form select { width: 100% } */
+                        flex-shrink: 0;
                     }
 
                     .phone-input-container input {
                         border: none;
                         border-radius: 0;
+                        flex: 1;
+                        width: auto;       /* Override global .lead-form input { width: 100% } */
+                        min-width: 0;      /* Prevent flex overflow */
                     }
 
                     .submit-button {
@@ -484,10 +502,16 @@
                         <div class="form-group">
                             <label for="phone">WhatsApp Number <i class="far fa-question-circle info-icon"></i></label>
                             <div class="phone-input-container">
-                                <span class="phone-prefix">+</span>
-                                <input type="tel" id="phone" name="phone" placeholder="1 234 567 890" required
-                                    pattern="[0-9+]{10,}">
+                                <select id="countryCode" name="countryCode" class="phone-prefix-select">
+                                    <option value="+91" selected>+91 (India)</option>
+                                    <option value="+1">+1 (USA)</option>
+                                    <option value="+44">+44 (UK)</option>
+                                    <option value="+971">+971 (UAE)</option>
+                                    <option value="+61">+61 (Australia)</option>
+                                </select>
+                                <input type="tel" id="phone" name="phone" placeholder="Enter WhatsApp number" required>
                             </div>
+                            <span id="phone-error" class="inline-error">Invalid phone number</span>
                         </div>
                         <div class="form-group">
                             <label for="country">Destination Country</label>
@@ -504,7 +528,8 @@
                         <div class="form-group">
                             <label for="travelDate">Estimated Travel Date</label>
                             <input type="date" id="travelDate" name="travelDate">
-                            <span style="font-size: 0.75rem; color: #6b7280; margin-top: -4px;">Optional – you can fill this later</span>
+                            <span style="font-size: 0.75rem; color: #6b7280; margin-top: -4px;">Optional – you can fill
+                                this later</span>
                         </div>
                     </div>
 
@@ -519,7 +544,7 @@
                     </button>
 
                     <div class="form-footer">
-                        By submitting, you agree to our <a href="#">Privacy Policy</a>.
+                        By submitting, you agree to our <a href="/privacy-policy.html">Privacy Policy</a>.
                     </div>
                 </form>
                 <!-- END OF NEW LEAD CAPTURE FORM -->

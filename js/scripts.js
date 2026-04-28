@@ -109,12 +109,49 @@ document.addEventListener('DOMContentLoaded', () => {
     const submitBtn = document.getElementById('submit-btn');
     const formStatus = document.getElementById('form-status');
     const phoneInput = document.getElementById('phone');
+    const countryCodeSelect = document.getElementById('countryCode');
+    const phoneError = document.getElementById('phone-error');
 
     if (form) {
+        // Validation function
+        const validatePhone = () => {
+            const code = countryCodeSelect.value;
+            const number = phoneInput.value;
+            let isValid = true;
+
+            if (number.length === 0) {
+                phoneError.style.display = 'none';
+                submitBtn.disabled = false;
+                return true;
+            }
+
+            if (code === '+91') {
+                isValid = number.length === 10;
+                phoneError.textContent = "Must be exactly 10 digits for India.";
+            } else {
+                isValid = number.length >= 7 && number.length <= 15;
+                phoneError.textContent = "Must be between 7 and 15 digits.";
+            }
+
+            if (!isValid) {
+                phoneError.style.display = 'block';
+                submitBtn.disabled = true;
+            } else {
+                phoneError.style.display = 'none';
+                submitBtn.disabled = false;
+            }
+            return isValid;
+        };
+
         // Enforce numeric characters dynamically as the user types
         phoneInput.addEventListener('input', function(e) {
-            this.value = this.value.replace(/[^0-9+]/g, '');
+            this.value = this.value.replace(/[^0-9]/g, '');
+            validatePhone();
         });
+
+        if(countryCodeSelect) {
+             countryCodeSelect.addEventListener('change', validatePhone);
+        }
 
         form.addEventListener('submit', async (e) => {
             // Prevent page reload on submit
@@ -141,12 +178,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            // 3. Validate phone length (minimum 10 digits)
-            const numericPhone = data.phone.replace(/[^0-9]/g, '');
-            if (numericPhone.length < 10) {
-                showStatus('Please enter a valid phone number with at least 10 digits.', 'error');
+            // 3. Final phone validation check before submitting
+            if (!validatePhone()) {
+                showStatus('Please fix the errors in your phone number.', 'error');
                 return;
             }
+            
+            // Combine country code and phone
+            const fullPhone = data.countryCode + data.phone;
 
             // Set loading state UI
             const originalBtnText = submitBtn.innerHTML;
@@ -165,7 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     },
                     body: JSON.stringify({
                         name: data.name,
-                        phone: data.phone,
+                        phone: fullPhone,
                         email: data.email,
                         country: data.country,
                         travelDate: data.travelDate,
