@@ -735,10 +735,22 @@ section {
     padding: 8rem 5%;
 }
 
+.contact-container {
+    max-width: 720px;
+    margin: 0 auto;
+    width: 100%;
+}
+
 .contact-container h2 {
     font-size: 2.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     color: white;
+}
+
+.contact-container > p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.05rem;
+    margin-bottom: 0.5rem;
 }
 
 .contact-details {
@@ -763,6 +775,177 @@ section {
 
 .contact-item a:hover {
     color: white;
+}
+
+/* ─── Lead Capture Form ─── */
+.lead-form {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 2rem;
+    margin: 2rem 0;
+    width: 100%;
+    text-align: left;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    font-family: var(--font-body);
+    box-sizing: border-box;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.form-group label .required {
+    color: #d0021b;
+}
+
+.form-group label .info-icon {
+    font-size: 0.75rem;
+    color: #888;
+    margin-left: 4px;
+}
+
+.lead-form input,
+.lead-form select,
+.lead-form textarea {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    color: #111111;
+    font-family: inherit;
+    font-size: 0.95rem;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+}
+
+.lead-form input::placeholder,
+.lead-form textarea::placeholder {
+    color: #9ca3af;
+}
+
+.lead-form input:focus,
+.lead-form select:focus,
+.lead-form textarea:focus {
+    outline: none;
+    border-color: #000000;
+    box-shadow: none;
+}
+
+.phone-input-container {
+    display: flex;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.phone-prefix-select {
+    background: #f9fafb;
+    padding: 0.85rem 0.5rem;
+    border: none;
+    border-right: 1px solid #e5e7eb;
+    color: #6b7280;
+    font-size: 0.95rem;
+    cursor: pointer;
+    outline: none;
+    width: 140px;
+    flex-shrink: 0;
+}
+
+.phone-input-container select {
+    width: 140px;
+    flex-shrink: 0;
+}
+
+.phone-input-container input {
+    border: none;
+    border-radius: 0;
+    flex: 1;
+    width: auto;
+    min-width: 0;
+}
+
+.inline-error {
+    font-size: 0.75rem;
+    color: #d0021b;
+    margin-top: 4px;
+    display: none;
+}
+
+.submit-button {
+    background: #000000;
+    color: #ffffff;
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background 0.2s;
+}
+
+.submit-button:hover {
+    background: #222222;
+}
+
+.submit-button i {
+    font-size: 1.1rem;
+}
+
+.form-footer {
+    text-align: center;
+    margin-top: 1.25rem;
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+.form-footer a {
+    color: #6b7280;
+    text-decoration: underline;
+}
+
+.form-status {
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    display: none;
+    text-align: center;
+}
+
+.status-success {
+    background: #dcfce7;
+    color: #166534;
+    border: 1px solid #bbf7d0;
+}
+
+.status-error {
+    background: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
 }
 
 /* Footer */
@@ -1130,8 +1313,17 @@ footer {
         padding: 4rem 5%;
     }
 
+    .contact-container {
+        max-width: 100%;
+        padding: 0;
+    }
+
     .contact-container h2 {
         font-size: 2rem;
+    }
+
+    .contact-container > p {
+        font-size: 0.95rem;
     }
 
     .contact-details {
@@ -1142,6 +1334,54 @@ footer {
 
     .contact-item {
         text-align: center;
+    }
+
+    /* ─── Lead Capture Form – Mobile ─── */
+    .lead-form {
+        padding: 1.25rem 1rem;
+        margin: 1rem 0;
+        border-radius: 6px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Inputs & selects: bigger touch target, no iOS zoom */
+    .lead-form input,
+    .lead-form select,
+    .lead-form textarea {
+        padding: 0.9rem 0.85rem;
+        font-size: 1rem;   /* prevents iOS auto-zoom */
+    }
+
+    /* Phone row – shrink the country-code select */
+    .phone-prefix-select {
+        width: auto;
+        min-width: 0;
+        padding: 0.9rem 0.4rem;
+        font-size: 0.85rem;
+    }
+
+    .phone-input-container select {
+        width: auto;
+    }
+
+    /* Submit button – taller touch target */
+    .submit-button {
+        padding: 1rem;
+        font-size: 1rem;
+        min-height: 52px;
+    }
+
+    .inline-error {
+        font-size: 0.8rem;
+    }
+
+    .form-status {
+        font-size: 0.85rem;
     }
 
     /* About Section */
@@ -1304,5 +1544,25 @@ footer {
 
     .whatsapp-float i {
         font-size: 24px;
+    }
+}
+
+/* Extra-small phones (iPhone SE, Galaxy A series, etc.) */
+@media (max-width: 380px) {
+    .lead-form {
+        padding: 1rem 0.75rem;
+    }
+
+    .phone-prefix-select {
+        font-size: 0.78rem;
+        padding: 0.9rem 0.3rem;
+    }
+
+    .form-group label {
+        font-size: 0.82rem;
+    }
+
+    .submit-button {
+        font-size: 0.95rem;
     }
 }
