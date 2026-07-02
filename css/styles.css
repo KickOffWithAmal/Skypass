@@ -599,6 +599,7 @@ section {
 .country-image {
     height: 200px;
     width: 100%;
+    flex-shrink: 0;
     background-size: cover;
     background-position: center;
     transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1319,10 +1320,16 @@ footer {
         display: none;
     }
 
-    .country-card {
+    .countries-grid > a {
         flex: 0 0 82%;
-        height: 420px;
         scroll-snap-align: center;
+        display: block;
+        text-decoration: none;
+    }
+
+    .country-card {
+        width: 100%;
+        height: 420px;
         margin-bottom: 1rem;
         transition: transform 0.3s ease;
     }
