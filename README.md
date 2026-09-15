@@ -51,7 +51,7 @@ Skypass/
 
 - **Email:** consult@skypassvisas.com
 - **Phone:** +91 859091474
-- **Address:** Skypass visa service, Building No. 24/1701, 2nd floor KC. Arcade, Kakkanad, India, 682037
+- **Address:** 3rd Floor, Jos Annexe Building, Skypass Visa Services KUBZ, Mahatma Gandhi Rd, opposite Bhima Jewels, Jos Junction, Ernakulam South, Kochi, Ernakulam, Kerala 682016
 - **Instagram:** [@skypass_kochi](https://www.instagram.com/skypass_kochi/)
 - **Twitter/X:** [@skypass_kochi](https://x.com/skypass_kochi)
 
