@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+Disallow: /Google cloud condole key/
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://skypassvisas.com/sitemap.xml

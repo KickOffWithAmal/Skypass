@@ -3,64 +3,72 @@
   <!-- Homepage -->
   <url>
     <loc>https://skypassvisas.com/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- Country Pages -->
   <url>
-    <loc>https://skypassvisas.com/australia-visa/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <loc>https://skypassvisas.com/usa-visa/</loc>
+    <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://skypassvisas.com/canada-visa/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://skypassvisas.com/japan-visa/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <loc>https://skypassvisas.com/uk-visa/</loc>
+    <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://skypassvisas.com/new-zealand-visa/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <loc>https://skypassvisas.com/australia-visa/</loc>
+    <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://skypassvisas.com/schengen-visa/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://skypassvisas.com/japan-visa/</loc>
+    <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://skypassvisas.com/south-korea-visa/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skypassvisas.com/new-zealand-visa/</loc>
+    <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://skypassvisas.com/uae-visa/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Supporting Pages -->
   <url>
-    <loc>https://skypassvisas.com/uk-visa/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <loc>https://skypassvisas.com/careers.html</loc>
+    <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://skypassvisas.com/usa-visa/</loc>
-    <lastmod>2026-07-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
   </url>
 </urlset>
