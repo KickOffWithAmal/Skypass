@@ -64,6 +64,14 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Guide Pages — Topical Authority Clusters -->
+  <url>
+    <loc>https://skypassvisas.com/canada-visa/document-checklist.html</loc>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- Supporting Pages -->
   <url>
     <loc>https://skypassvisas.com/careers.html</loc>
